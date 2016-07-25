@@ -24,6 +24,11 @@ until equation == 'exit'
           operator = equation_query[1]
           z = equation_query[2].to_i
           answer= calc(x,operator,z)
+            if answer == nil
+                  answer = "nil"
+                  puts "Be sure to leave a space between your numbers and the operator. And also, only use numbers - no letters."
+                else
+                end
           puts answer
 
     calc_string = "#{equation} " + " " + "= #{answer}"
