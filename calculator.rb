@@ -12,13 +12,12 @@ if operator == "+"
 
 end
 
-puts "Please enter a number"
-x = gets.to_i
+puts "Please enter an equation you'd like to run."
+equation = gets.chomp
+equation = equation.split(' ')
 
-puts "Now enter which math operator you'd like to use: +, -, *, or /"
-operator = gets.chomp
-
-puts "Now enter another number."
-z = gets.to_i
+x = equation[0].to_i
+operator = equation[1]
+z = equation[2].to_i
 
 puts calc(x,operator,z)
